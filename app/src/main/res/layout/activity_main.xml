@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Simple LAN Call"
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        android:gravity="center"
+
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="IP tujuan" />
+
+    <EditText
+        android:id="@+id/ipEdit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="192.168.1.20"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Port"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/portEdit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="5000"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/listenButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="WAIT / LISTEN"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/connectButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="CONNECT"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/endButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="END CALL"
+
+        android:enabled="false"
+
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/statusText"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Disconnected"
+
+        android:textSize="18sp"
+        android:gravity="center"
+
+        android:layout_marginTop="30dp" />
+
+</LinearLayout>
