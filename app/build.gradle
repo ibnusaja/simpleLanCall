@@ -1,3 +1,21 @@
 plugins {
-    id 'com.android.application' version '8.2.2' apply false
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.simplelancall'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.example.simplelancall'
+
+        minSdk 23
+        targetSdk 28
+
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
 }
