@@ -2,6 +2,8 @@ name: Build APK
 on:
   push:
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +17,9 @@ jobs:
         with:
           gradle-version: 8.7
       - run: gradle assembleDebug --no-daemon
-      - uses: actions/upload-artifact@v4
+      - run: cp app/build/outputs/apk/debug/app-debug.apk P2PCall.apk
+      - uses: softprops/action-gh-release@v2
         with:
-          name: P2PCall-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          tag_name: v1.0.${{ github.run_number }}
+          name: P2PCall v1.0.${{ github.run_number }}
+          files: P2PCall.apk

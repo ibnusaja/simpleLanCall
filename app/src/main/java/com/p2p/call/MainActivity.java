@@ -35,6 +35,20 @@ public class MainActivity extends Activity {
         findViewById(R.id.bServer).setOnClickListener(v -> start(true));
         findViewById(R.id.bClient).setOnClickListener(v -> start(false));
         findViewById(R.id.bStop).setOnClickListener(v -> stop());
+        handleIntent(getIntent());
+    }
+
+    @Override protected void onNewIntent(android.content.Intent i) {
+        super.onNewIntent(i);
+        setIntent(i);
+        handleIntent(i);
+    }
+
+    // am start -n com.p2p.call/.MainActivity --ez server true [--ei port 5000]
+    void handleIntent(android.content.Intent i) {
+        if (i == null || !i.getBooleanExtra("server", false)) return;
+        if (i.hasExtra("port")) portIn.setText(String.valueOf(i.getIntExtra("port", 5000)));
+        start(true);
     }
 
     String localIp() {
