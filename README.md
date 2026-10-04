@@ -1,2 +1,0 @@
-# simpleLanCall
-ya seperti itulah

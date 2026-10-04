@@ -1,21 +1,16 @@
-plugins {
-    id 'com.android.application'
-}
-
+plugins { id 'com.android.application' }
 android {
-    namespace 'com.example.simplelancall'
-    compileSdk 35
-
+    namespace 'com.p2p.call'
+    compileSdk 34
     defaultConfig {
-        applicationId 'com.example.simplelancall'
-
-        minSdk 23
-        targetSdk 28
-
+        applicationId "com.p2p.call"
+        minSdk 24
+        targetSdk 34
         versionCode 1
         versionName "1.0"
     }
-}
-
-dependencies {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
 }

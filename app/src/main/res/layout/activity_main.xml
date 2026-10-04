@@ -1,98 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:orientation="vertical"
-    android:padding="24dp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="Simple LAN Call"
-        android:textSize="28sp"
-        android:textStyle="bold"
-
-        android:gravity="center"
-
-        android:layout_marginBottom="32dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="IP tujuan" />
-
-    <EditText
-        android:id="@+id/ipEdit"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:hint="192.168.1.20"
-        android:inputType="text" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="Port"
-        android:layout_marginTop="12dp" />
-
-    <EditText
-        android:id="@+id/portEdit"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="5000"
-        android:inputType="number" />
-
-    <Button
-        android:id="@+id/listenButton"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="WAIT / LISTEN"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/connectButton"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="CONNECT"
-        android:layout_marginTop="8dp" />
-
-    <Button
-        android:id="@+id/endButton"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="END CALL"
-
-        android:enabled="false"
-
-        android:layout_marginTop="8dp" />
-
-    <TextView
-        android:id="@+id/statusText"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="Disconnected"
-
-        android:textSize="18sp"
-        android:gravity="center"
-
-        android:layout_marginTop="30dp" />
-
+    <TextView android:id="@+id/info" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/ip" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="IP server (untuk client)" android:inputType="phone"/>
+    <EditText android:id="@+id/port" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Port" android:text="5000" android:inputType="number"/>
+    <Button android:id="@+id/bServer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Jadi Server"/>
+    <Button android:id="@+id/bClient" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Telepon (Client)"/>
+    <Button android:id="@+id/bStop" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stop"/>
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Idle"/>
 </LinearLayout>
